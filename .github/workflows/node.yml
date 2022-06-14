@@ -5,12 +5,12 @@ name: NASA Project CI
 on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
-    branches: [ "master" ]
+    branches: ["master"]
   pull_request:
-    branches: [ "master" ]
+    branches: ["master"]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs: 
+jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
@@ -25,9 +25,10 @@ jobs:
       - name: Use Node.js version 16
         uses: actions/setup-node@v3.3.0
         with:
-          node-version: '16'
-      
+          node-version: "16"
+
       # Running a command - install dependencies in client & server => [ npm, yarn ]
       - name: Install Dependencies
         run: npm install
+      - name: Client Build
         run: npm build --prefix client
