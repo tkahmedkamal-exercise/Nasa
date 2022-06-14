@@ -30,5 +30,3 @@ jobs:
       # Running a command - install dependencies in client & server => [ npm, yarn ]
       - name: Install Dependencies
         run: npm install
-      - name: Client Run Build
-        run: npm run build --prefix client
