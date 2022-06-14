@@ -10,8 +10,7 @@
     "server": "npm start --prefix server",
     "client": "npm start --prefix client",
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "deploy": "npm run build --prefix client && npm run server --prefix server",
-    "deploy-cluster": "npm run build --prefix client && npm run cluster --prefix server"
+    "deploy": "npm run build --prefix client && npm run server --prefix server"
   },
   "keywords": [],
   "author": "",
