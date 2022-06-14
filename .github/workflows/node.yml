@@ -23,12 +23,12 @@ jobs:
 
       # Checks nodejs version
       - name: Use Node.js version 16
-        uses: actions/setup-node@v3.3.0
+        uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: 16
 
       # Running a command - install dependencies in client & server => [ npm, yarn ]
       - name: Install Dependencies
         run: npm install
       - name: Client Run Build
-        run: npm build --prefix client
+        run: npm run build --prefix client
